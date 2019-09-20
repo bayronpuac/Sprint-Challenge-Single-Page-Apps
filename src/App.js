@@ -4,15 +4,15 @@ import { Route } from "react-router-dom";
 import Header from "./components/Header.js";
 import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList"
-import LocationList from "./components/LocationsList";
+import SearchForm from "./components/SearchForm.js";
 
 export default function App() {
   return (
     <main>
       <Header />
+      <SearchForm />
       <Route exact path="/" component={WelcomePage} />
-      <Route path="/character" component={CharacterList} />
-      <Route path="/location" component={LocationList} />
+      <Route path="/character" render={props => <CharacterList {...props}  />} />
     </main>
   );
 }
