@@ -12,8 +12,8 @@ export default function CharacterList() {
       axios 
       .get("https://rickandmortyapi.com/api/character/")
       .then(res => {
-        console.log(res);
         setCharacter(res.data.results);
+        // console.log(res.data.results);
       })
       .catch(error => {
         console.error("Server Error", error);
@@ -25,7 +25,7 @@ export default function CharacterList() {
     <div className="character-list">
       {character.map(character => {
         console.log(character);
-        return <CharacterCard key={character.id} character={character} />
+        return <CharacterCard key={character.id} character={character} />;
 })}
     </div>
   );
