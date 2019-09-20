@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  CardTitle, CardSubtitle
 } from 'reactstrap';
 
+
 const CharacterCard = props => {
-  const { image, name, species, type, status, episode } = props.character;
+  const { image, name, species, status} = props.character;
   return (
-    <div class="card">
       <Card>
         <CardImg top width="20%" src={image} alt="Card image cap" />
         <CardBody>
@@ -16,7 +16,6 @@ const CharacterCard = props => {
           <CardText>Status: {status}</CardText>
         </CardBody>
       </Card>
-    </div>
   );
 };
 

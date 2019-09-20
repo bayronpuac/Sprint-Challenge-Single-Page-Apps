@@ -12,6 +12,8 @@ export default function App() {
       <Header />
       <SearchForm />
       <Route exact path="/" component={WelcomePage} />
+      {/* <Route exact path="/character/:id" render={props => <CharacterList {...props} />} /> */}
+      {/* <Route path="/character" component={CharacterList}/> */}
       <CharacterList />
     </main>
   );
